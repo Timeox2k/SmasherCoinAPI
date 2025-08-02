@@ -1,5 +1,6 @@
 package me.timeox2k.smasherCoinAPI;
 
+import me.timeox2k.smasherCoinAPI.listener.PlayerListener;
 import me.timeox2k.smasherCoinAPI.manager.DatabaseManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,6 +16,8 @@ public final class SmasherCoinAPI extends JavaPlugin {
         getConfig().addDefault("MySQL.password", "");
         getConfig().options().copyDefaults(true);
         saveConfig();
+
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
         databaseManager = new DatabaseManager();
     }
