@@ -1,0 +1,6 @@
+name: SmasherCoinAPI
+version: '1.0-SNAPSHOT'
+main: me.timeox2k.smasherCoinAPI.SmasherCoinAPI
+api-version: '1.21'
+load: STARTUP
+website: https://BoxSRV.net
